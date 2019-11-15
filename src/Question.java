@@ -1,10 +1,15 @@
-public class Question {
+public abstract class Question {
     private String text;
     private String questionReturnType;
 
     public Question(String text, String questionReturnType) {
         this.text = text;
         this.questionReturnType = questionReturnType;
+    }
+
+    public Question() {
+        text = "How many dogs do you have?";
+        questionReturnType = "int";
     }
 
     public String getText() {

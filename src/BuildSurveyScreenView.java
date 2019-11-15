@@ -80,7 +80,7 @@ public class BuildSurveyScreenView extends JFrame {
         newQuestionPanel.add(questionReturnTypePanel);
         newQuestionPanel.setBackground(Color.CYAN);
 
-        mainPanel.add(newQuestionPanel, BorderLayout.NORTH);
+       mainPanel.add(newQuestionPanel, BorderLayout.NORTH);
 
 
 
@@ -91,7 +91,7 @@ public class BuildSurveyScreenView extends JFrame {
         ~~~~~~~~~~~~~~~~~~~~~~~~~
          */
         JPanel addedQuestionsPanel = new JPanel();
-        addedQuestionsPanel.setLayout(new GridLayout(10, 0));
+        addedQuestionsPanel.setLayout(new GridLayout(10, 1));
         addedQuestionsPanel.setBackground(Color.CYAN);
 
         mainPanel.add(addedQuestionsPanel, BorderLayout.CENTER);
