@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BooleanQuestion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TitleScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TitleScreenView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
