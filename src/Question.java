@@ -1,15 +1,21 @@
-public abstract class Question {
-    private String text;
-    private String questionReturnType;
+import java.util.Scanner;
 
-    public Question(String text, String questionReturnType) {
+public class Question {
+    private String text;
+    private String trueResponse;
+    private String falseResponse;
+    private String userResponse;
+
+
+    public Question(String text, String trueResponse, String falseResponse) {
         this.text = text;
-        this.questionReturnType = questionReturnType;
+        this.trueResponse = trueResponse;
+        this.falseResponse = falseResponse;
+        this.userResponse = null;
     }
 
     public Question() {
         text = "How many dogs do you have?";
-        questionReturnType = "int";
     }
 
     public String getText() {
@@ -20,11 +26,38 @@ public abstract class Question {
         this.text = text;
     }
 
-    public String getQuestionReturnType() {
-        return questionReturnType;
+    public String getTrueResponse() {
+        return trueResponse;
     }
 
-    public void setQuestionReturnType(String questionReturnType) {
-        this.questionReturnType = questionReturnType;
+    public void setTrueResponse(String trueResponse) {
+        this.trueResponse = trueResponse;
+    }
+
+    public String getFalseResponse() {
+        return falseResponse;
+    }
+
+    public void setFalseResponse(String falseResponse) {
+        this.falseResponse = falseResponse;
+    }
+
+    public String getUserResponse() {
+        return userResponse;
+    }
+
+    public void setUserResponse(String userResponse) {
+        this.userResponse = userResponse;
+    }
+
+    public void getValidResponse() {
+        Scanner kb = new Scanner(System.in);
+        userResponse = kb.next();
+        System.out.println(userResponse);
+    }
+
+    @Override
+    public String toString() {
+        return "Question: " + text;
     }
 }
