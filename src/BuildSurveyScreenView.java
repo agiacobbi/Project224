@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BuildSurveyScreenView extends JFrame {
+    private Controller controller;
     protected JLabel numberedQuestion;
     protected JTextField writeQuestion;
     protected JButton addQuestionButton;
@@ -9,9 +10,14 @@ public class BuildSurveyScreenView extends JFrame {
     protected JButton trueFalseButton;
     protected JButton yesNoButton;
     protected JButton buildButton;
+    protected JPanel addQuestionPanel;
+    protected JPanel addedQuestionsPanel;
+    protected int i;
 
-    public BuildSurveyScreenView() {
+    public BuildSurveyScreenView(Controller controller) {
         super("Build Survey");
+        this.controller = controller;
+        i = 1;
 
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,10 +47,10 @@ public class BuildSurveyScreenView extends JFrame {
         Row 1 of newQuestionPanel
         ~~~~~~~~~~~~~~~~~~~~~~~~~
          */
-        JPanel addQuestionPanel = new JPanel();
+        addQuestionPanel = new JPanel();
         addQuestionPanel.setLayout(new BorderLayout());
 
-        numberedQuestion = new JLabel("1.");
+        numberedQuestion = new JLabel(i + ".");
         writeQuestion = new JTextField();
         JLabel questionReturnType = new JLabel("What kind of response are you looking for?");
         addQuestionButton = new JButton("Add Question");
@@ -90,7 +96,7 @@ public class BuildSurveyScreenView extends JFrame {
         mainPanel's CENTER
         ~~~~~~~~~~~~~~~~~~~~~~~~~
          */
-        JPanel addedQuestionsPanel = new JPanel();
+        addedQuestionsPanel = new JPanel();
         addedQuestionsPanel.setLayout(new GridLayout(10, 1));
         addedQuestionsPanel.setBackground(Color.CYAN);
 
@@ -105,5 +111,13 @@ public class BuildSurveyScreenView extends JFrame {
          */
         buildButton = new JButton("Build Survey");
         mainPanel.add(buildButton, BorderLayout.SOUTH);
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
     }
 }
