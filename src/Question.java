@@ -5,13 +5,15 @@ public class Question {
     private String trueResponse;
     private String falseResponse;
     private String userResponse;
+    private String questionType;
 
 
-    public Question(String text, String trueResponse, String falseResponse) {
+    public Question(String text, String trueResponse, String falseResponse, String type) {
         this.text = text;
         this.trueResponse = trueResponse;
         this.falseResponse = falseResponse;
         this.userResponse = null;
+        this.questionType = type;
     }
 
     public Question() {
@@ -40,6 +42,14 @@ public class Question {
 
     public void setFalseResponse(String falseResponse) {
         this.falseResponse = falseResponse;
+    }
+
+    public String getQuestionType() {
+        return questionType;
+    }
+
+    public void setQuestionType(String questionType) {
+        this.questionType = questionType;
     }
 
     public String getUserResponse() {

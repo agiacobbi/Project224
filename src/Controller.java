@@ -20,7 +20,7 @@ public class Controller {
                 panel.setLayout(new GridLayout(2,1));
 
                 JLabel textLabel = new JLabel();
-                Question question = new Question(view.writeQuestion.getText(), "True", "False");
+                Question question = new Question(view.writeQuestion.getText(), "True", "False", "TF");
                 model.addQuestion(question);
                 textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
 
@@ -45,6 +45,16 @@ public class Controller {
         });
 
 
+        view.buildButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                SurveyDatabaseHelper helper = new SurveyDatabaseHelper(model.getTitle());
+                for (Question q : model.getQuestions()) {
+                    helper.insertQuestion(q);
+                }
+                // TODO return home
+            }
+        });
     }
 
     public static void main(String[] args) {

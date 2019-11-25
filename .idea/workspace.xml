@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Controller">
+  <component name="RunManager" selected="Application.TakeSurveyScreenView">
     <configuration name="BuildTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BuildTest" />
       <module name="PollABear" />
@@ -76,8 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Controller" />
         <item itemvalue="Application.TakeSurveyScreenView" />
+        <item itemvalue="Application.Controller" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.BuildTest" />
       </list>
