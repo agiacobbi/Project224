@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.sql.*;
 import java.util.List;
 
@@ -9,7 +10,6 @@ public class DatabaseHelper {
     static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
     static final String ID = "id";
 
-
     Connection connection;
 
     public DatabaseHelper(String title, List<Question> questionList) {
@@ -19,14 +19,14 @@ public class DatabaseHelper {
         createSurveyTable();
     }
 
-    public DatabaseHelper() {
+    public DatabaseHelper(String title) {
+        this.title = title;
         getConnection();
-        createSurveyTable();
+        //createSurveyTable();
     }
 
     public void insertResponse(List<Question> responseList) {
-        // INSERT INTO tableContacts VALUES(null, 'Spike the Bulldog',
-        // '509-509-5095', '')
+
         String sqlInsert = "INSERT INTO " + title + " VALUES(null, " ;
         String responses = "";
 
@@ -46,6 +46,23 @@ public class DatabaseHelper {
                 e.printStackTrace();
             }
         }
+    }
+
+    public ResultSet getResponses() {
+        String sqlSelect = "SELECT * from " + title;
+        System.out.println(sqlSelect);
+
+        if (connection != null) {
+            try {
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlSelect);
+                return resultSet;
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
     }
 
     public void createSurveyTable() {

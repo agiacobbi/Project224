@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/xchart_3_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ResultController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ResultDatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SurveyResultView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PollABear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PollABear.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/DatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/DatabaseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/META-INF/PollABear.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseHelper.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +33,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.27.2.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TakeSurveyScreenView">
+  <component name="RunManager" selected="Application.ResultController">
     <configuration name="BuildTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BuildTest" />
       <module name="PollABear" />
@@ -73,6 +72,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResultController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ResultController" />
+      <module name="PollABear" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TakeSurveyScreenView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TakeSurveyScreenView" />
       <module name="PollABear" />
@@ -82,6 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ResultController" />
         <item itemvalue="Application.TakeSurveyScreenView" />
         <item itemvalue="Application.Controller" />
         <item itemvalue="Application.Main" />
