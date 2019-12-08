@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/ResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/ResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SurveyResultView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultView.java" afterDir="false" />
+>>>>>>> 6d4c6808e38403b263783fa22de5011fc8241792
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +40,35 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.27.2.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
+<<<<<<< HEAD
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+=======
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
+>>>>>>> ab129894ca90b3820b06d02f28c022f830bfa1c6
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.Controller">
+=======
+  <component name="RunManager" selected="Application.ResultController">
+>>>>>>> 6d4c6808e38403b263783fa22de5011fc8241792
     <configuration name="BuildTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BuildTest" />
       <module name="PollABear" />
@@ -61,6 +90,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResultController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ResultController" />
+      <module name="PollABear" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TakeSurveyScreenView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TakeSurveyScreenView" />
       <module name="PollABear" />
@@ -70,6 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+=======
+        <item itemvalue="Application.ResultController" />
+        <item itemvalue="Application.TakeSurveyScreenView" />
+>>>>>>> 6d4c6808e38403b263783fa22de5011fc8241792
         <item itemvalue="Application.Controller" />
         <item itemvalue="Application.TakeSurveyScreenView" />
         <item itemvalue="Application.Main" />
