@@ -11,7 +11,7 @@ public class TakeSurveyScreenView extends JFrame{
     private int size;
     public JRadioButton trueButton;
     public JRadioButton falseButton;
-    JButton submitResponses;
+    public JButton submitResponses;
     private DatabaseHelper helper;
 
 
@@ -43,6 +43,7 @@ public class TakeSurveyScreenView extends JFrame{
         //frame.setLayout();
         questionBank = new JPanel();
         questionBank.setLayout(new GridLayout(0, 1));
+        JScrollPane scrollPane = new JScrollPane(questionBank);
         questionBank.setBackground(Color.CYAN);
 
         int i = 1;
@@ -100,12 +101,12 @@ public class TakeSurveyScreenView extends JFrame{
         }
         submitResponses = new JButton("Submit Responses");
         frame.add(submitResponses, BorderLayout.SOUTH);
-        frame.add(questionBank, BorderLayout.CENTER);
+        frame.add(scrollPane, BorderLayout.CENTER);
     }
 
     public static void main(String[] args) {
         Survey model = new Survey("Survey");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             Question newGuy = new Question("is this " + i, "Yes", "No", "TF");
             model.addQuestion(newGuy);
         }

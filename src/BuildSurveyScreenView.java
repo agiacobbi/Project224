@@ -5,13 +5,18 @@ public class BuildSurveyScreenView extends JFrame {
     private Controller controller;
     protected JLabel numberedQuestion;
     protected JTextField writeQuestion;
+    protected JTextField option1;
+    protected JTextField option2;
+    protected JTextField option3;
+    protected JTextField option4;
     protected JButton addQuestionButton;
-    protected JButton numericalButton;
-    protected JButton trueFalseButton;
-    protected JButton yesNoButton;
+    protected JRadioButton twoAnswerButton;
+    protected JRadioButton threeAnswerButton;
+    protected JRadioButton fourAnswerButton;
     protected JButton buildButton;
     protected JPanel addQuestionPanel;
     protected JPanel addedQuestionsPanel;
+    protected JPanel newQuestionPanel;
     protected int i;
 
     public BuildSurveyScreenView(Controller controller) {
@@ -37,9 +42,9 @@ public class BuildSurveyScreenView extends JFrame {
         mainPanel's NORTH
         ~~~~~~~~~~~~~~~~~~~~~~~~~
          */
-        JPanel newQuestionPanel = new JPanel();
+        newQuestionPanel = new JPanel();
         newQuestionPanel.setBorder(BorderFactory.createTitledBorder("What is your question?"));
-        newQuestionPanel.setLayout(new GridLayout(2, 0));
+        newQuestionPanel.setLayout(new GridLayout(0, 1));
 
 
         /*
@@ -74,17 +79,57 @@ public class BuildSurveyScreenView extends JFrame {
         questionReturnTypePanel.setLayout(new GridLayout(0,4));
         questionReturnTypePanel.setBackground(Color.CYAN);
 
-        numericalButton = new JButton("Numerical");
-        trueFalseButton = new JButton("True/False");
-        yesNoButton = new JButton("Yes/No");
+        Controller.MyRadioButtonItemListener myItemListener = controller.new MyRadioButtonItemListener();
 
-        questionReturnTypePanel.add(numericalButton);
-        questionReturnTypePanel.add(trueFalseButton);
-        questionReturnTypePanel.add(yesNoButton);
+        twoAnswerButton = new JRadioButton("2 Answer Options");
+        twoAnswerButton.setBackground(Color.CYAN);
+        twoAnswerButton.addItemListener(myItemListener);
 
+        threeAnswerButton = new JRadioButton("3 Answer Options");
+        threeAnswerButton.setBackground(Color.CYAN);
+        threeAnswerButton.addItemListener(myItemListener);
+
+        fourAnswerButton = new JRadioButton("4 Answer Options");
+        fourAnswerButton.setBackground(Color.CYAN);
+        fourAnswerButton.addItemListener(myItemListener);
+
+        ButtonGroup answerGroup = new ButtonGroup();
+
+        answerGroup.add(twoAnswerButton);
+        answerGroup.add(threeAnswerButton);
+        answerGroup.add(fourAnswerButton);
+
+        questionReturnTypePanel.add(twoAnswerButton);
+        questionReturnTypePanel.add(threeAnswerButton);
+        questionReturnTypePanel.add(fourAnswerButton);
 
         newQuestionPanel.add(questionReturnTypePanel);
         newQuestionPanel.setBackground(Color.CYAN);
+
+        /*
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Third row of newQuestionPanel
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         */
+        JPanel optionsPanel = new JPanel();
+        optionsPanel.setLayout(new GridLayout(0,4));
+
+        option1 = new JTextField();
+        option2 = new JTextField();
+        option3 = new JTextField();
+        option4 = new JTextField();
+
+        option1.setEnabled(false);
+        option2.setEnabled(false);
+        option3.setEnabled(false);
+        option4.setEnabled(false);
+
+        optionsPanel.add(option1);
+        optionsPanel.add(option2);
+        optionsPanel.add(option3);
+        optionsPanel.add(option4);
+
+        newQuestionPanel.add(optionsPanel);
 
        mainPanel.add(newQuestionPanel, BorderLayout.NORTH);
 
@@ -97,10 +142,11 @@ public class BuildSurveyScreenView extends JFrame {
         ~~~~~~~~~~~~~~~~~~~~~~~~~
          */
         addedQuestionsPanel = new JPanel();
-        addedQuestionsPanel.setLayout(new GridLayout(10, 1));
+        addedQuestionsPanel.setLayout(new GridLayout(0, 1));
         addedQuestionsPanel.setBackground(Color.CYAN);
+        JScrollPane scrollPane = new JScrollPane(addedQuestionsPanel);
 
-        mainPanel.add(addedQuestionsPanel, BorderLayout.CENTER);
+        mainPanel.add(scrollPane, BorderLayout.CENTER);
 
 
 

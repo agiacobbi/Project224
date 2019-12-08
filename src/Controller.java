@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class Controller {
     private BuildSurveyScreenView view;
@@ -12,9 +14,9 @@ public class Controller {
         this.view = new BuildSurveyScreenView(this);
         this.model = model;
 
-        view.trueFalseButton.addActionListener(new ActionListener() {
+        view.addQuestionButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent actionEvent) {
                 JPanel panel = new JPanel();
                 panel.setBackground(Color.CYAN);
                 panel.setLayout(new GridLayout(2,1));
@@ -26,7 +28,7 @@ public class Controller {
 
                 JLabel typeLabel = new JLabel();
                 typeLabel.setFont(new Font("Arial", Font.ITALIC, 12));
-                typeLabel.setText(view.trueFalseButton.getText());
+                typeLabel.setText(view.threeAnswerButton.getText());
 
                 panel.add(textLabel);
                 panel.add(typeLabel);
@@ -36,11 +38,36 @@ public class Controller {
 
 
                 view.addedQuestionsPanel.validate();
+            }
+        });
 
-                if (view.getI() > 10) {
-                    view.addQuestionButton.setEnabled(false);
-                    view.numberedQuestion.setText("");
-                }
+        view.twoAnswerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                view.option1.setEnabled(true);
+                view.option2.setEnabled(true);
+                view.option3.setEnabled(false);
+                view.option4.setEnabled(false);
+            }
+        });
+
+        view.threeAnswerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                view.option1.setEnabled(true);
+                view.option2.setEnabled(true);
+                view.option3.setEnabled(true);
+                view.option4.setEnabled(false);
+            }
+        });
+
+        view.fourAnswerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                view.option1.setEnabled(true);
+                view.option2.setEnabled(true);
+                view.option3.setEnabled(true);
+                view.option4.setEnabled(true);
             }
         });
 
@@ -61,5 +88,22 @@ public class Controller {
         Survey model = new Survey("Survey");
         Controller controller = new Controller(model);
 
+    }
+
+    class MyRadioButtonItemListener implements ItemListener {
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            // https://docs.oracle.com/javase/7/docs/api/java/awt/event/ItemEvent.html
+            JRadioButton radioButton = (JRadioButton) e.getSource();
+            System.out.println(radioButton.isSelected());
+            switch (e.getStateChange()) {
+                case ItemEvent.SELECTED:
+                    System.out.println(radioButton.getText() + " is now selected");
+                    break;
+                case ItemEvent.DESELECTED:
+                    System.out.println(radioButton.getText() + " is now deselected");
+                    break;
+            }
+        }
     }
 }

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TakeSurveyScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/META-INF/PollABear.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Application.TakeSurveyScreenView">
+  <component name="RunManager" selected="Application.Controller">
     <configuration name="BuildTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BuildTest" />
       <module name="PollABear" />
@@ -70,8 +70,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TakeSurveyScreenView" />
         <item itemvalue="Application.Controller" />
+        <item itemvalue="Application.TakeSurveyScreenView" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.BuildTest" />
       </list>
@@ -116,22 +116,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1575343769557">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1575771890605">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1575343769557" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1575343769557">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1575771890605" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1575771890604">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1575343769557" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1575343769557">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1575771890604">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1575343769557" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1575343769557">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1575771890604">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1575343769557" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
     <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1574980404544">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
