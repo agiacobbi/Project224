@@ -1,7 +1,9 @@
 
 import org.knowm.xchart.PieChart;
 import org.knowm.xchart.PieChartBuilder;
-import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.XChartPanel;
+import org.knowm.xchart.style.PieStyler;
+import org.knowm.xchart.style.Styler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,7 +55,7 @@ public class ResultController {
         } catch (SQLException e) {
             e.printStackTrace();
             JLabel errorLabel = new JLabel("Could not load charts.");
-            view.graphPanel.add(errorLabel, BorderLayout.CENTER);
+            view.mainPanel.add(errorLabel, BorderLayout.CENTER);
         }
 
 
@@ -68,13 +70,21 @@ public class ResultController {
                     .title("Question " + i)
                     .build();
 
+            chart.getStyler().setLegendPosition(Styler.LegendPosition.OutsideE);
+            chart.getStyler().setLegendLayout(Styler.LegendLayout.Vertical);
+            chart.getStyler().setLegendVisible(true);
+
             for (String key : responseMap.keySet()) {
                 chart.addSeries(key, responseMap.get(key));
             }
 
-            new SwingWrapper<PieChart>(chart).displayChart();
+            JPanel chartPanel = new XChartPanel<PieChart>(chart);
+            chartPanel.setBorder(BorderFactory.createTitledBorder("Question " + i));
+            view.graphPanel.add(chartPanel);
             i++;
         }
+        view.graphScroll.setViewportView(view.graphPanel);
+
     }
 
     public static void main(String[] args) {

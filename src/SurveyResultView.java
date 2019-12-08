@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SurveyResultView extends JFrame {
+    JPanel mainPanel;
+    JScrollPane graphScroll;
     JPanel graphPanel;
     String surveyTitle;
 
@@ -17,8 +19,15 @@ public class SurveyResultView extends JFrame {
     }
 
     private void setupUI() {
-        graphPanel = (JPanel) getContentPane();
+        mainPanel = (JPanel) getContentPane();
         JLabel titleLabel = new JLabel("Results for " + surveyTitle);
-        graphPanel.add(titleLabel, BorderLayout.NORTH);
+        mainPanel.add(titleLabel, BorderLayout.NORTH);
+
+        graphScroll = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        mainPanel.add(graphScroll, BorderLayout.CENTER);
+
+        graphPanel = new JPanel();
+        graphPanel.setLayout(new BoxLayout(graphPanel, BoxLayout.Y_AXIS));
+        graphScroll.setViewportView(graphPanel);
     }
 }
