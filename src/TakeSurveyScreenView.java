@@ -1,11 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TakeSurveyScreenView extends JFrame{
     //private Controller controller;
+    JPanel frame;
     private JPanel questionBank;
     private Survey survey;
     private int size;
+    public JRadioButton trueButton;
+    public JRadioButton falseButton;
+    JButton submitResponses;
+    private DatabaseHelper helper;
 
 
     /*public TakeSurveyScreenView(Controller controller, Survey survey) {
@@ -32,7 +39,9 @@ public class TakeSurveyScreenView extends JFrame{
     }
 
     private void setupUI() {
-        questionBank = (JPanel) getContentPane();
+        frame = (JPanel) getContentPane();
+        //frame.setLayout();
+        questionBank = new JPanel();
         questionBank.setLayout(new GridLayout(0, 1));
         questionBank.setBackground(Color.CYAN);
 
@@ -44,12 +53,43 @@ public class TakeSurveyScreenView extends JFrame{
             questionPanel.setBorder(BorderFactory.createTitledBorder("Question" + i));
             JLabel questionLabel = new JLabel(q.getText());
 
-            JRadioButton trueButton = new JRadioButton(q.getTrueResponse());
-            JRadioButton falseButton = new JRadioButton(q.getFalseResponse());
+            trueButton = new JRadioButton(q.getTrueResponse());
+            falseButton = new JRadioButton(q.getFalseResponse());
 
             ButtonGroup buttonGroup = new ButtonGroup();
             buttonGroup.add(trueButton);
             buttonGroup.add(falseButton);
+
+            trueButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("true");
+
+                    int i = 0;
+                    for(int j = 0; j < survey.questions.size(); j++) {
+                        if(survey.questions.get(j).getText() == questionLabel.getText()) {
+                            i = j;
+                        }
+                    }
+                    survey.questions.get(i).setUserResponse("true");
+                }
+            });
+
+            falseButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("false");
+
+                    int i = 0;
+                    for(int j = 0; j < survey.questions.size(); j++) {
+                        if(survey.questions.get(j).getText() == questionLabel.getText()) {
+                            i = j;
+                        }
+                    }
+                    survey.questions.get(i).setUserResponse("false");
+
+                }
+            });
 
             questionPanel.add(questionLabel);
             questionPanel.add(trueButton);
@@ -58,17 +98,9 @@ public class TakeSurveyScreenView extends JFrame{
 
             i++;
         }
-
-    }
-
-    private void makeButtonGroup() {
-        JRadioButton trueButton = new JRadioButton("Yes");
-        JRadioButton falseButton = new JRadioButton("No");
-
-        ButtonGroup buttonGroup = new ButtonGroup();
-        buttonGroup.add(trueButton);
-        buttonGroup.add(falseButton);
-
+        submitResponses = new JButton("Submit Responses");
+        frame.add(submitResponses, BorderLayout.SOUTH);
+        frame.add(questionBank, BorderLayout.CENTER);
     }
 
     public static void main(String[] args) {
@@ -78,7 +110,8 @@ public class TakeSurveyScreenView extends JFrame{
             model.addQuestion(newGuy);
         }
 
-        new TakeSurveyScreenView(model);
+        //new TakeSurveyScreenView(model);
         //Controller controller = new Controller(model);
+        new TakeSurveyScreenController(model);
     }
 }
