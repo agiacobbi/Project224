@@ -1,10 +1,4 @@
 
-import org.knowm.xchart.PieChart;
-import org.knowm.xchart.PieChartBuilder;
-import org.knowm.xchart.XChartPanel;
-import org.knowm.xchart.style.PieStyler;
-import org.knowm.xchart.style.Styler;
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.ResultSet;
@@ -13,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/*
 public class ResultController {
     ResultSet surveyResults;
     String title;
@@ -91,3 +85,4 @@ public class ResultController {
         new ResultController("PetSurvey");
     }
 }
+*/
