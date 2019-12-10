@@ -73,8 +73,13 @@ public class TabbedPaneController {
         view.takeSurveyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper("mother");
+                Survey s = getHelper.getSurvey();
+                getHelper.closeConnection();
 
-                // TODO add listener to open take survey view for a survey
+                // TODO FIX THIS
+
+                new TakeSurveyScreenController(s);
 
             }
         });

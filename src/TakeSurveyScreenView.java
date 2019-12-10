@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +16,8 @@ public class TakeSurveyScreenView extends JFrame{
 
     public TakeSurveyScreenView(Survey survey) {
         super("Take Survey");
+        this.survey = survey;
+        questions = new ArrayList<>();
 
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,6 +49,7 @@ public class TakeSurveyScreenView extends JFrame{
 
     class QuestionPanel extends JPanel {
         Question question;
+        int questionIndex;
         JRadioButton aButton;
         JRadioButton bButton;
         JRadioButton cButton;
@@ -53,6 +57,7 @@ public class TakeSurveyScreenView extends JFrame{
 
         public QuestionPanel(Question question, int i) {
             this.question = question;
+            questionIndex = i - 1;
 
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             setBackground(Color.CYAN);
