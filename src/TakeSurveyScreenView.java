@@ -20,7 +20,6 @@ public class TakeSurveyScreenView extends JFrame{
         questions = new ArrayList<>();
 
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(700, 550));
 
         setupUI();
@@ -59,7 +58,7 @@ public class TakeSurveyScreenView extends JFrame{
             this.question = question;
             questionIndex = i - 1;
 
-            setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+            setLayout(new GridLayout(0,1));
             setBackground(Color.CYAN);
             setBorder(BorderFactory.createTitledBorder("Question" + i));
 

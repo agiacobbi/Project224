@@ -1,8 +1,5 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 
 public class TakeSurveyScreenController {
     private TakeSurveyScreenView view;
@@ -20,8 +17,19 @@ public class TakeSurveyScreenController {
         view.submitResponses.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                ResponseDatabaseHelper helper = new ResponseDatabaseHelper();
+                if (!allQuestionsAnswered()) {
+                    JOptionPane.showMessageDialog(view,
+                            "You must answer all the questions",
+                            "Cannot submit",
+                            JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                ResponseDatabaseHelper helper = new ResponseDatabaseHelper(survey.title);
                 helper.insertResponse(survey.questions);
+                helper.closeConnection();
+
+                view.dispatchEvent(new WindowEvent(view, WindowEvent.WINDOW_CLOSING));
             }
         });
 
@@ -31,13 +39,47 @@ public class TakeSurveyScreenController {
                     @Override
                     public void itemStateChanged(ItemEvent itemEvent) {
                         JRadioButton button = (JRadioButton) itemEvent.getSource();
-                        if (itemEvent.getStateChange() == itemEvent.SELECTED) {
-                            survey.questions.get(p.questionIndex).setUserResponse(button.getText());
-                        }
+                        survey.questions.get(p.questionIndex).setUserResponse(button.getText());
+                    }
+                });
+            }
+            if (p.bButton != null) {
+                p.bButton.addItemListener(new ItemListener() {
+                    @Override
+                    public void itemStateChanged(ItemEvent itemEvent) {
+                        JRadioButton button = (JRadioButton) itemEvent.getSource();
+                        survey.questions.get(p.questionIndex).setUserResponse(button.getText());
+                    }
+                });
+            }
+            if (p.cButton != null) {
+                p.cButton.addItemListener(new ItemListener() {
+                    @Override
+                    public void itemStateChanged(ItemEvent itemEvent) {
+                        JRadioButton button = (JRadioButton) itemEvent.getSource();
+                        survey.questions.get(p.questionIndex).setUserResponse(button.getText());
+                    }
+                });
+            }
+            if (p.dButton != null) {
+                p.dButton.addItemListener(new ItemListener() {
+                    @Override
+                    public void itemStateChanged(ItemEvent itemEvent) {
+                        JRadioButton button = (JRadioButton) itemEvent.getSource();
+                        survey.questions.get(p.questionIndex).setUserResponse(button.getText());
                     }
                 });
             }
         }
+    }
+
+    private boolean allQuestionsAnswered() {
+        for (Question q : survey.questions) {
+            if (q.getUserResponse() == null) {
+                return false;
+            }
+        }
+        return true;
     }
 
 

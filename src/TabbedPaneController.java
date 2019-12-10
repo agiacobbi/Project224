@@ -55,8 +55,6 @@ public class TabbedPaneController {
                 } else {
                     new BuildSurveyController(existingSurvey);
                 }
-
-                updateLists();
             }
         });
 
@@ -73,14 +71,12 @@ public class TabbedPaneController {
         view.takeSurveyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper("mother");
+                String selectedSurvey = view.surveysList.getSelectedValue();
+                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper(selectedSurvey);
                 Survey s = getHelper.getSurvey();
                 getHelper.closeConnection();
 
-                // TODO FIX THIS
-
                 new TakeSurveyScreenController(s);
-
             }
         });
 

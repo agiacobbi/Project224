@@ -16,7 +16,7 @@ public class ResponseDatabaseHelper {
     Connection connection;
     String title;
 
-    public ResponseDatabaseHelper(String title, List<Question> questionList) {
+    public ResponseDatabaseHelper(String title) {
         this.title = title;
         getConnection();
         createResponseTable();
