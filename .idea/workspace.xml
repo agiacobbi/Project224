@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TabbedPaneView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/ResultController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/databaseQuestions.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databaseQuestions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyScreenView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller$MyRadioButtonItemListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/DatabaseHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyScreenView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResponseDatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabbedPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,16 +74,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TabbedPane">
-    <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Controller" />
-      <module name="PollABear" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Application.TabbedPaneController">
+    <configuration name="BuildSurveyController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BuildSurveyController" />
       <module name="PollABear" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,8 +89,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TabbedPane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TabbedPane" />
+    <configuration name="TabbedPaneController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TabbedPaneController" />
+      <module name="PollABear" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TabbedPaneView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TabbedPaneView" />
       <module name="PollABear" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -87,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TabbedPane" />
+        <item itemvalue="Application.TabbedPaneController" />
+        <item itemvalue="Application.TabbedPaneView" />
         <item itemvalue="Application.ResultController" />
         <item itemvalue="Application.TakeSurveyScreenView" />
-        <item itemvalue="Application.Controller" />
-        <item itemvalue="Application.TakeSurveyScreenView" />
+        <item itemvalue="Application.BuildSurveyController" />
       </list>
     </recent_temporary>
   </component>

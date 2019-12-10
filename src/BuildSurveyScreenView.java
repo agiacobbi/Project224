@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BuildSurveyScreenView extends JFrame {
-    private Controller controller;
+    private BuildSurveyController controller;
     protected JLabel numberedQuestion;
     protected JTextField writeQuestion;
     protected JTextField option1;
@@ -19,14 +19,13 @@ public class BuildSurveyScreenView extends JFrame {
     protected JPanel newQuestionPanel;
     protected int i;
 
-    public BuildSurveyScreenView(Controller controller) {
+    public BuildSurveyScreenView(BuildSurveyController controller) {
         super("Build Survey");
         this.controller = controller;
         i = 1;
 
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(700, 850));
+        setPreferredSize(new Dimension(700, 550));
         setupUI();
         pack();
     }
@@ -79,7 +78,7 @@ public class BuildSurveyScreenView extends JFrame {
         questionReturnTypePanel.setLayout(new GridLayout(0,4));
         questionReturnTypePanel.setBackground(Color.CYAN);
 
-        Controller.MyRadioButtonItemListener myItemListener = controller.new MyRadioButtonItemListener();
+        BuildSurveyController.MyRadioButtonItemListener myItemListener = controller.new MyRadioButtonItemListener();
 
         twoAnswerButton = new JRadioButton("2 Answer Options");
         twoAnswerButton.setBackground(Color.CYAN);

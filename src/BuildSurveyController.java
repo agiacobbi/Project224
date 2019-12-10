@@ -1,16 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 
-public class Controller {
+public class BuildSurveyController {
     private BuildSurveyScreenView view;
     private Survey model;
-    private DatabaseHelper database;
+    private ResponseDatabaseHelper database;
 
-    public Controller(Survey model) {
+    public BuildSurveyController(Survey model) {
         this.view = new BuildSurveyScreenView(this);
         this.model = model;
 
@@ -22,7 +19,13 @@ public class Controller {
                 panel.setLayout(new GridLayout(2,1));
 
                 JLabel textLabel = new JLabel();
-                Question question = new Question(view.writeQuestion.getText(), "True", "False", "TF");
+                String questionStr = view.writeQuestion.getText();
+                String aResp = view.option1.getText();
+                String bResp = view.option2.getText();
+                String cResp = view.option3.getText().length() > 0 ? view.option3.getText() : null;
+                String dResp = view.option4.getText().length() > 0 ? view.option4.getText() : null;
+
+                Question question = new Question(questionStr, aResp, bResp, cResp, dResp);
                 model.addQuestion(question);
                 textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
 
@@ -79,14 +82,15 @@ public class Controller {
                 for (Question q : model.getQuestions()) {
                     helper.insertQuestion(q);
                 }
-                // TODO return home
+                view.dispatchEvent(new WindowEvent(view, WindowEvent.WINDOW_CLOSING));
+                helper.closeConnection();
             }
         });
     }
 
     public static void main(String[] args) {
         Survey model = new Survey("Survey");
-        Controller controller = new Controller(model);
+        BuildSurveyController controller = new BuildSurveyController(model);
 
     }
 

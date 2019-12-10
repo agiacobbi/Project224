@@ -3,11 +3,19 @@ import java.awt.event.ActionListener;
 
 public class TakeSurveyScreenController {
     private TakeSurveyScreenView view;
-    private DatabaseHelper helper;
+    private ResponseDatabaseHelper helper;
+    private Survey survey;
 
     public TakeSurveyScreenController(Survey survey) {
         this.view = new TakeSurveyScreenView(survey);
+        this.survey = survey;
 
+        addActionListeners();
+
+
+    }
+
+    private void addActionListeners() {
         view.submitResponses.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -15,4 +23,6 @@ public class TakeSurveyScreenController {
             }
         });
     }
+
+
 }
