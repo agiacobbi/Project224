@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/ResultController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResultController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
