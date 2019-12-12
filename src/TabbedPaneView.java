@@ -1,5 +1,5 @@
 /**
- * DESCRIPTION
+ * Creates the GUI for the tabbed panes and holds all the components necessary for the view
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -12,6 +12,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+/**
+ * sets up GUI for all the tabs which appear at the top of the screen
+ * Extends JFrame and uses BorderLayouts and TabbedPanes to format the view
+ * @see  JTabbedPane
+ */
 public class TabbedPaneView extends JFrame {
     private JTabbedPane tabbedPane;
     JButton createSurveyButton;
@@ -22,6 +27,9 @@ public class TabbedPaneView extends JFrame {
     JList<String> availableResultsList;
     JList<String> createSurveyList;
 
+    /**
+     * Constructor for TabbedPaneView and sets parameters for the JFrame and builds frame
+     */
     public TabbedPaneView() {
         super("Poll A Bear");
 
@@ -33,6 +41,9 @@ public class TabbedPaneView extends JFrame {
         pack();
     }
 
+    /**
+     * sets up all GUI components for the JFrame
+     */
     private void setupUI() {
         JPanel mainPanel = (JPanel) getContentPane();
         setBackground(Color.CYAN);
@@ -52,6 +63,9 @@ public class TabbedPaneView extends JFrame {
         mainPanel.add(tabbedPane);
     }
 
+    /**
+     * puts all the pane components into one JTabbedPane
+     */
     private void setupTabbedPane() {
         tabbedPane = new JTabbedPane();
 
@@ -67,6 +81,10 @@ public class TabbedPaneView extends JFrame {
         tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
     }
 
+    /**
+     * sets up all the GUI components for the view survey panel
+     * @return component viewSurveyPanel component
+     */
     private Component viewSurveyPanel() {
         JPanel panel = new JPanel();
         panel.setBackground(Color.CYAN);
@@ -91,6 +109,10 @@ public class TabbedPaneView extends JFrame {
         return panel;
     }
 
+    /**
+     * sets up all the GUI components for the take survey panel
+     * @return component takeSurveyPanel component
+     */
     private Component takeSurveyPanel() {
         JPanel panel = new JPanel();
         panel.setBackground(Color.CYAN);
@@ -115,6 +137,10 @@ public class TabbedPaneView extends JFrame {
         return panel;
     }
 
+    /**
+     * sets up all the GUI components for the make survey panel
+     * @return JComponent makeSurveyPanel JComponent
+     */
     protected JComponent makeSurveyPanel() {
         JPanel panel = new JPanel();
         panel.setBackground(Color.CYAN);

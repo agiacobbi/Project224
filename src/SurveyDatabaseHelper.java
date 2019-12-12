@@ -1,5 +1,7 @@
 /**
- * DESCRIPTION
+ * This is the databse helper for the survey database. It allows the
+ * program to connect to and interact with a database storing information
+ * about surveys
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -12,6 +14,17 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * This class connects to a database to persist survey data between runs of the app.
+ * There are string constants for all database attributes as well as a connection
+ * field and a title field. There are methods to create the table for the database,
+ * insert new questions, retrieve surveys, retrieve a list of all survey titles, delete
+ * a survey, clear the table, establish a connection, and close the connection.
+ *
+ * @see Survey
+ * @see Question
+ */
 public class SurveyDatabaseHelper {
     private static final String DATABASE_NAME = "databaseQuestions.db";
     private static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
@@ -28,6 +41,11 @@ public class SurveyDatabaseHelper {
     private String surveyTitle;
     private Connection connection;
 
+    /**
+     * Initializes a connection to the database, sets the title to the survey of interest,
+     * and creates the survey table if necessary
+     * @param surveyTitle
+     */
     public SurveyDatabaseHelper (String surveyTitle) {
         this.surveyTitle = surveyTitle;
 
@@ -35,6 +53,9 @@ public class SurveyDatabaseHelper {
         createSurveyTable();
     }
 
+    /**
+     * Creates the Survey table in the database if it does not already exist.
+     */
     private void createSurveyTable() {
         String sqlCreate = "CREATE TABLE " + TABLE_NAME + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -57,6 +78,11 @@ public class SurveyDatabaseHelper {
         }
     }
 
+    /**
+     * Inserts a question into the database for the survey specified by the
+     * title field
+     * @param question Question to insert
+     */
     public void insertQuestion(Question question) {
         String sqlInsert = "INSERT INTO " + TABLE_NAME + " VALUES (null, '" +
                 surveyTitle + "', '" +
@@ -79,6 +105,11 @@ public class SurveyDatabaseHelper {
         }
     }
 
+
+    /**
+     * Gets a survey from the database and returns it as a survey object
+     * @return Survey object with title matching the title field
+     */
     public Survey getSurvey() {
         Survey survey = new Survey(surveyTitle);
         String sqlSelect = "SELECT * FROM " + TABLE_NAME + " WHERE " + SURVEY_NAME + " = '" +
@@ -107,6 +138,10 @@ public class SurveyDatabaseHelper {
         return survey;
     }
 
+    /**
+     * Gets a list of all survey titles that are stored in the database
+     * @return a List of string titles
+     */
     public List<String> getAvailableSurveys() {
         String sqlSelect = "SELECT DISTINCT " + SURVEY_NAME + " FROM " + TABLE_NAME;
         System.out.println(sqlSelect);
@@ -130,6 +165,11 @@ public class SurveyDatabaseHelper {
         return surveyList;
     }
 
+
+    /**
+     * Deletes a survey from the database with a given title
+     * @param title String title to be deleted from the database
+     */
     public void deleteSurvey(String title) {
         String sqlDelete = "DELETE FROM " + TABLE_NAME + " WHERE " +
                 SURVEY_NAME  + " = '" + title + "'";
@@ -145,6 +185,9 @@ public class SurveyDatabaseHelper {
         }
     }
 
+    /**
+     * Deletes all data from the Survey table
+     */
     public void clearTable() {
         String sqlDelete = "DELETE FROM " + TABLE_NAME;
         if (connection != null) {
@@ -158,6 +201,9 @@ public class SurveyDatabaseHelper {
     }
 
 
+    /**
+     * Establishes a connection to the database
+     */
     public void getConnection() {
         try {
             connection = DriverManager.getConnection(CONNECTION_URL);
@@ -167,6 +213,9 @@ public class SurveyDatabaseHelper {
         }
     }
 
+    /**
+     * Closes the connection to the database
+     */
     public void closeConnection() {
         if (connection != null) {
             try {
@@ -178,6 +227,10 @@ public class SurveyDatabaseHelper {
     }
 
 
+    /**
+     * Checks if a table already exists within the database
+     * @return true of the table exists, false otherwise
+     */
     private boolean tableExists() {
         // http://www.java2s.com/Code/Java/Database-SQL-JDBC/Detectifatableexists.htm
         DatabaseMetaData md = null;
