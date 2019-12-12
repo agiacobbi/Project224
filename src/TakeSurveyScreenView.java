@@ -72,6 +72,7 @@ public class TakeSurveyScreenView extends JFrame{
             ButtonGroup buttonGroup = new ButtonGroup();
             if (question.getaResponse() != null) {
                 aButton = new JRadioButton(question.getaResponse());
+                System.out.println("a response: " + question.getaResponse());
                 add(aButton);
                 buttonGroup.add(aButton);
             }
