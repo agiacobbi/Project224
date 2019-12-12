@@ -4,21 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SurveyDatabaseHelper {
-    static final String DATABASE_NAME = "databaseQuestions.db";
-    static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
-    static final String ID = "id";
-    static final String QUESTION = "question";
-    static final String RE_A = "response_a";
-    static final String RE_B = "response_b";
-    static final String RE_C = "response_c";
-    static final String RE_D = "response_d";
-    static final String RE_E = "response_e";
-    static final String TABLE_NAME = "Survey";
-    static final String SURVEY_NAME = "name";
+    private static final String DATABASE_NAME = "databaseQuestions.db";
+    private static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
+    private static final String ID = "id";
+    private static final String QUESTION = "question";
+    private static final String RE_A = "response_a";
+    private static final String RE_B = "response_b";
+    private static final String RE_C = "response_c";
+    private static final String RE_D = "response_d";
+    private static final String RE_E = "response_e";
+    private static final String TABLE_NAME = "Survey";
+    private static final String SURVEY_NAME = "name";
 
-    String surveyTitle;
-
-    Connection connection;
+    private String surveyTitle;
+    private Connection connection;
 
     public SurveyDatabaseHelper (String surveyTitle) {
         this.surveyTitle = surveyTitle;

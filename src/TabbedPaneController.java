@@ -6,7 +6,7 @@ import java.awt.event.WindowFocusListener;
 import java.util.List;
 
 public class TabbedPaneController {
-    TabbedPaneView view;
+    private TabbedPaneView view;
 
     public TabbedPaneController() {
         view = new TabbedPaneView();

@@ -2,10 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SurveyResultView extends JFrame {
-    JPanel mainPanel;
     JScrollPane graphScroll;
     JPanel graphPanel;
-    String surveyTitle;
+    private String surveyTitle;
 
     public SurveyResultView(String surveyTitle) {
         this.surveyTitle = surveyTitle;
@@ -18,7 +17,7 @@ public class SurveyResultView extends JFrame {
     }
 
     private void setupUI() {
-        mainPanel = (JPanel) getContentPane();
+        JPanel mainPanel = (JPanel) getContentPane();
         JLabel titleLabel = new JLabel("Results for " + surveyTitle);
         mainPanel.add(titleLabel, BorderLayout.NORTH);
 
