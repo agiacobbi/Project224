@@ -1,11 +1,9 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.util.List;
-import java.util.ArrayList;
 
 public class TabbedPaneController {
     TabbedPaneView view;
@@ -61,13 +59,18 @@ public class TabbedPaneController {
         view.deleteSurveyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                String selectedSurvey = view.createSurveyList.getSelectedValue();
 
-                System.out.println("delete button clicked");
-                // TODO maybe implement edit survey functionality
-                String selectedSurvey = view.surveysList.getSelectedValue();
-                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper(selectedSurvey, true);
-                getHelper.deleteSurvey();
+                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper(selectedSurvey);
+                ResponseDatabaseHelper deleteHelper = new ResponseDatabaseHelper();
+
+                getHelper.deleteSurvey(selectedSurvey);
                 getHelper.closeConnection();
+
+                deleteHelper.deleteSurvey(selectedSurvey);
+                deleteHelper.closeConnection();
+
+                updateLists();
             }
         });
 
@@ -88,8 +91,8 @@ public class TabbedPaneController {
         view.viewResultsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
-                // TODO add listener to view results for a selected survey
+                String selectedSurvey = view.availableResultsList.getSelectedValue();
+                new SurveyResultController(selectedSurvey);
             }
         });
     }
@@ -122,6 +125,15 @@ public class TabbedPaneController {
 
 
     public static void main(String[] args) {
+//        ResponseDatabaseHelper deleteHelper = new ResponseDatabaseHelper();
+//        SurveyDatabaseHelper deletionHelper = new SurveyDatabaseHelper(null);
+//
+//        deleteHelper.clearTable();
+//        deletionHelper.clearTable();
+//
+//        deleteHelper.closeConnection();
+//        deletionHelper.closeConnection();
         new TabbedPaneController();
+
     }
 }

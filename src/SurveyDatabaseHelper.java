@@ -27,13 +27,6 @@ public class SurveyDatabaseHelper {
         createSurveyTable();
     }
 
-    public SurveyDatabaseHelper(String surveyTitle, boolean deleteSurveyVal) {
-        if (deleteSurveyVal) {
-            this.surveyTitle = surveyTitle;
-            getConnection();
-        }
-    }
-
     private void createSurveyTable() {
         String sqlCreate = "CREATE TABLE " + TABLE_NAME + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -129,11 +122,24 @@ public class SurveyDatabaseHelper {
         return surveyList;
     }
 
-    public void deleteSurvey() {
-        String sqlDelete = "DROP TABLE " + surveyTitle;
+    public void deleteSurvey(String title) {
+        String sqlDelete = "DELETE FROM " + TABLE_NAME + " WHERE " +
+                SURVEY_NAME  + " = '" + title + "'";
         System.out.println(sqlDelete);
 
-        if (connection != null && !tableExists()) {
+        if (connection != null) {
+            try {
+                Statement statement = connection.createStatement();
+                statement.execute(sqlDelete);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void clearTable() {
+        String sqlDelete = "DELETE FROM " + TABLE_NAME;
+        if (connection != null) {
             try {
                 Statement statement = connection.createStatement();
                 statement.execute(sqlDelete);

@@ -6,12 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TakeSurveyScreenView extends JFrame{
-    //private Controller controller;
-    JPanel frame;
-    JPanel questionBank;
     JButton submitResponses;
     List<QuestionPanel> questions;
-    Survey survey;
+    private Survey survey;
 
 
     public TakeSurveyScreenView(Survey survey) {
@@ -27,8 +24,8 @@ public class TakeSurveyScreenView extends JFrame{
     }
 
     private void setupUI() {
-        frame = (JPanel) getContentPane();
-        questionBank = new JPanel();
+        JPanel frame = (JPanel) getContentPane();
+        JPanel questionBank = new JPanel();
         questionBank.setLayout(new BoxLayout(questionBank, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(questionBank);
         questionBank.setBackground(Color.CYAN);
@@ -94,17 +91,5 @@ public class TakeSurveyScreenView extends JFrame{
         }
 
 
-    }
-
-    public static void main(String[] args) {
-        Survey model = new Survey("Survey");
-        for (int i = 0; i < 10; i++) {
-            Question newGuy = new Question("is this " + i, "Yes", "No", "TF");
-            model.addQuestion(newGuy);
-        }
-
-        //new TakeSurveyScreenView(model);
-        //Controller controller = new Controller(model);
-        new TakeSurveyScreenController(model);
     }
 }
