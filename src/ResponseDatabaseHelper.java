@@ -87,7 +87,7 @@ public class ResponseDatabaseHelper {
         Map<String, Integer> resultMap = new HashMap<>();
         String sqlSelect = "SELECT * FROM " + TABLE_NAME + " WHERE " +
                 SURVEY_NAME + " = '" + title + "' AND " +
-                QUESTION + " = '" + question + "'";
+                QUESTION + " = '" + question.getText() + "'";
         System.out.println(sqlSelect);
 
         if (connection != null) {
@@ -96,6 +96,7 @@ public class ResponseDatabaseHelper {
                 ResultSet resultSet = statement.executeQuery(sqlSelect);
                 while (resultSet.next()) {
                     String key = resultSet.getString(RESPONSE);
+                    System.out.println(key);
                     if (resultMap.containsKey(key)) {
                         resultMap.put(key, resultMap.get(key) + 1);
                     } else {

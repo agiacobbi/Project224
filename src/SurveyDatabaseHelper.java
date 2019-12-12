@@ -122,8 +122,9 @@ public class SurveyDatabaseHelper {
         return surveyList;
     }
 
-    public void deleteSurvey() {
-        String sqlDelete = "DROP TABLE " + surveyTitle;
+    public void deleteSurvey(String title) {
+        String sqlDelete = "DELETE FROM " + surveyTitle + " WHERE " +
+                SURVEY_NAME  + " = '" + title + "'";
         System.out.println(sqlDelete);
 
         if (connection != null && !tableExists()) {

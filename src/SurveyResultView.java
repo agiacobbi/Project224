@@ -11,7 +11,6 @@ public class SurveyResultView extends JFrame {
         this.surveyTitle = surveyTitle;
 
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(600, 600));
 
         setupUI();

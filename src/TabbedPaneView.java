@@ -28,10 +28,13 @@ public class TabbedPaneView extends JFrame {
         setBackground(Color.CYAN);
 
         availableResultsList = new JList<>();
+        availableResultsList.setFont(new Font("Arial", Font.BOLD, 18));
         availableResultsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         surveysList = new JList<>();
+        surveysList.setFont(new Font("Arial", Font.BOLD, 18));
         surveysList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         createSurveyList = new JList<>();
+        createSurveyList.setFont(new Font("Arial", Font.BOLD, 18));
         createSurveyList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
         setupTabbedPane();
@@ -62,7 +65,7 @@ public class TabbedPaneView extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         JLabel message = new JLabel("Select a survey to view its results");
-        message.setFont(new Font("Arial", Font.BOLD, 24));
+        message.setFont(new Font("Arial", Font.BOLD, 28));
 
         //TODO make this be centered on top
         panel.add(message, BorderLayout.NORTH);
@@ -93,7 +96,7 @@ public class TabbedPaneView extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         JLabel message = new JLabel("Select a survey to take");
-        message.setFont(new Font("Arial", Font.BOLD, 24));
+        message.setFont(new Font("Arial", Font.BOLD, 28));
 
         //TODO make this be centered on top
         panel.add(message, BorderLayout.NORTH);
@@ -123,8 +126,8 @@ public class TabbedPaneView extends JFrame {
         panel.setLayout(new BorderLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-        JLabel message = new JLabel("Select a survey to edit, or click \"Create Survey\" to build a new one");
-        message.setFont(new Font("Arial", Font.BOLD, 24));
+        JLabel message = new JLabel("Create a survey to get started");
+        message.setFont(new Font("Arial", Font.BOLD, 28));
 
         //TODO make this be centered on top
         panel.add(message, BorderLayout.NORTH);

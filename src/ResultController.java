@@ -1,13 +1,15 @@
+import org.knowm.xchart.PieChart;
+import org.knowm.xchart.PieChartBuilder;
+import org.knowm.xchart.XChartPanel;
+import org.knowm.xchart.style.Styler;
 
 import javax.swing.*;
-import java.awt.*;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-/*
+
+
 public class ResultController {
     ResultSet surveyResults;
     String title;
@@ -22,46 +24,34 @@ public class ResultController {
     }
 
     private void getResults() {
-        DatabaseHelper helper = new DatabaseHelper(title);
-        surveyResults = helper.getResponses();
+        ResponseDatabaseHelper helper = new ResponseDatabaseHelper(title);
+        SurveyDatabaseHelper surveyHelper = new SurveyDatabaseHelper(title);
+        List<Map<String, Integer>> resultsList = new ArrayList<>();
+        List<Question> questionList = new ArrayList<>();
+        Survey survey = surveyHelper.getSurvey();
+        surveyHelper.closeConnection();
 
-
-        try {
-            int numberOfQuestions = surveyResults.getMetaData().getColumnCount();
-            List<Map<String, Integer>> questionResponses = new ArrayList<>();
-            for (int i = 0; i < numberOfQuestions - 1; i++) {
-                questionResponses.add(new HashMap<>());
-            }
-
-            while (surveyResults.next()) {
-                for (int i = 0; i < numberOfQuestions - 1; i++) {
-                    String key = surveyResults.getString("Q" + (i + 1));
-                    if (questionResponses.get(i).containsKey(key)) {
-                        questionResponses.get(i).put(key, questionResponses.get(i).get(key) + 1);
-                    } else {
-                        questionResponses.get(i).put(key, 1);
-                    }
-                }
-            }
-
-            addCharts(questionResponses);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            JLabel errorLabel = new JLabel("Could not load charts.");
-            view.mainPanel.add(errorLabel, BorderLayout.CENTER);
+        for (Question q : survey.questions) {
+            questionList.add(q);
+            resultsList.add(helper.getResponsesForQuestion(q));
+            System.out.println("Question: " + q.getText());
+            System.out.println(helper.getResponsesForQuestion(q));
         }
 
-
+        helper.closeConnection();
+        addCharts(resultsList, questionList);
     }
 
-    private void addCharts(List<Map<String, Integer>> questionResponses) {
+    private void addCharts(List<Map<String, Integer>> questionResponses, List<Question> questions) {
+        System.out.println(questionResponses);
+
         int i = 1;
         for (Map<String, Integer> responseMap : questionResponses) {
+            String questionText = questions.get(i - 1).getText();
             PieChart chart = new PieChartBuilder()
                     .width(300)
                     .height(300)
-                    .title("Question " + i)
+                    .title(questionText)
                     .build();
 
             chart.getStyler().setLegendPosition(Styler.LegendPosition.OutsideE);
@@ -72,17 +62,15 @@ public class ResultController {
                 chart.addSeries(key, responseMap.get(key));
             }
 
-            JPanel chartPanel = new XChartPanel<PieChart>(chart);
+            JPanel chartPanel = new XChartPanel<>(chart);
             chartPanel.setBorder(BorderFactory.createTitledBorder("Question " + i));
             view.graphPanel.add(chartPanel);
             i++;
         }
         view.graphScroll.setViewportView(view.graphPanel);
-
     }
 
     public static void main(String[] args) {
         new ResultController("PetSurvey");
     }
 }
-*/

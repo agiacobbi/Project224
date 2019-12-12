@@ -84,8 +84,8 @@ public class TabbedPaneController {
         view.viewResultsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
-                // TODO add listener to view results for a selected survey
+                String selectedSurvey = view.availableResultsList.getSelectedValue();
+                new ResultController(selectedSurvey);
             }
         });
     }
