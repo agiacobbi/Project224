@@ -140,15 +140,6 @@ public class TabbedPaneController {
 
 
     public static void main(String[] args) {
-//        ResponseDatabaseHelper deleteHelper = new ResponseDatabaseHelper();
-//        SurveyDatabaseHelper deletionHelper = new SurveyDatabaseHelper(null);
-//
-//        deleteHelper.clearTable();
-//        deletionHelper.clearTable();
-//
-//        deleteHelper.closeConnection();
-//        deletionHelper.closeConnection();
         new TabbedPaneController();
-
     }
 }

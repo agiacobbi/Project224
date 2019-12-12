@@ -8,7 +8,6 @@
  * @version v1.0 12/12/19
  */
 
-import javax.print.DocFlavor;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
