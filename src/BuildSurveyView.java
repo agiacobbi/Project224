@@ -1,7 +1,17 @@
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
+
 import javax.swing.*;
 import java.awt.*;
 
-public class BuildSurveyScreenView extends JFrame {
+public class BuildSurveyView extends JFrame {
     private BuildSurveyController controller;
     protected JLabel numberedQuestion;
     protected JTextField writeQuestion;
@@ -19,7 +29,7 @@ public class BuildSurveyScreenView extends JFrame {
     protected JPanel newQuestionPanel;
     protected int i;
 
-    public BuildSurveyScreenView(BuildSurveyController controller) {
+    public BuildSurveyView(BuildSurveyController controller) {
         super("Build Survey");
         this.controller = controller;
         i = 1;

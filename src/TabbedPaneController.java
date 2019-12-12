@@ -1,3 +1,14 @@
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
+
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +52,10 @@ public class TabbedPaneController {
                         JOptionPane.INFORMATION_MESSAGE
                         );
 
+                if (surveyTitle.length() == 0) {
+                    return;
+                }
+
                 SurveyDatabaseHelper checkHelper = new SurveyDatabaseHelper(surveyTitle);
                 Survey existingSurvey = checkHelper.getSurvey();
                 checkHelper.closeConnection();
@@ -83,7 +98,7 @@ public class TabbedPaneController {
                 Survey s = getHelper.getSurvey();
                 getHelper.closeConnection();
 
-                new TakeSurveyScreenController(s);
+                new TakeSurveyController(s);
             }
         });
 

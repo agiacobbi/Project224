@@ -1,13 +1,23 @@
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class TakeSurveyScreenController {
-    private TakeSurveyScreenView view;
+public class TakeSurveyController {
+    private TakeSurveyView view;
     private ResponseDatabaseHelper helper;
     private Survey survey;
 
-    public TakeSurveyScreenController(Survey survey) {
-        this.view = new TakeSurveyScreenView(survey);
+    public TakeSurveyController(Survey survey) {
+        this.view = new TakeSurveyView(survey);
         this.survey = survey;
 
         addActionListeners();
@@ -33,7 +43,7 @@ public class TakeSurveyScreenController {
             }
         });
 
-        for (TakeSurveyScreenView.QuestionPanel p : view.questions) {
+        for (TakeSurveyView.QuestionPanel p : view.questions) {
             if (p.aButton != null) {
                 p.aButton.addItemListener(new ItemListener() {
                     @Override
@@ -81,6 +91,4 @@ public class TakeSurveyScreenController {
         }
         return true;
     }
-
-
 }
