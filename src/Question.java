@@ -1,4 +1,12 @@
-import java.util.Scanner;
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
 
 public class Question {
     private String text;

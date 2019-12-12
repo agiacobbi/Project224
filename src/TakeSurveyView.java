@@ -1,17 +1,26 @@
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class TakeSurveyScreenView extends JFrame{
+
+public class TakeSurveyView extends JFrame{
     JButton submitResponses;
     List<QuestionPanel> questions;
     private Survey survey;
 
 
-    public TakeSurveyScreenView(Survey survey) {
+    public TakeSurveyView(Survey survey) {
         super("Take Survey");
         this.survey = survey;
         questions = new ArrayList<>();
@@ -89,7 +98,5 @@ public class TakeSurveyScreenView extends JFrame{
                 buttonGroup.add(dButton);
             }
         }
-
-
     }
 }

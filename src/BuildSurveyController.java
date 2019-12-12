@@ -1,14 +1,24 @@
+/**
+ * DESCRIPTION
+ * CPSC 224-01, Fall 2019
+ * Final Project -- Poll-A-Bear
+ * CITATIONS
+ *
+ * @author Alex Giacobbi, Ghar Pautz, Win Todd
+ * @version v1.0 12/12/19
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class BuildSurveyController {
-    private BuildSurveyScreenView view;
+    private BuildSurveyView view;
     private Survey model;
     private ResponseDatabaseHelper database;
 
     public BuildSurveyController(Survey model) {
-        this.view = new BuildSurveyScreenView(this);
+        this.view = new BuildSurveyView(this);
         this.model = model;
 
         view.addQuestionButton.addActionListener(new ActionListener() {
