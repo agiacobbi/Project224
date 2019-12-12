@@ -1,5 +1,7 @@
 /**
- * DESCRIPTION
+ * This program controls the result view of the app. It loads results from the
+ * database, generates pie charts for each question and displays them to the
+ * user
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -20,10 +22,26 @@ import java.util.List;
 import java.util.Map;
 
 
+/**
+ * This class is a controller for the SurveyResultView. It contains fields for the
+ * survey title and the view. There are methods to get the results for a survey title,
+ * and add XChart pie charts to the view based on the results.
+ *
+ * @see SurveyResultView
+ * @see Question
+ * @see Survey
+ * @see ResponseDatabaseHelper
+ * @see SurveyDatabaseHelper
+ */
 public class SurveyResultController {
     private String title;
     private SurveyResultView view;
 
+    /**
+     * Initializes the title field to the title passed into the constructor,
+     * and initializes a new result view. Calls getResults() to load results
+     * @param title String title of the survey to be viewed
+     */
     public SurveyResultController(String title) {
         this.title = title;
         this.view = new SurveyResultView(title);
@@ -32,6 +50,12 @@ public class SurveyResultController {
 
     }
 
+    /**
+     * Connects to both the Question and Response databases to retrieve results for
+     * a survey. Gets the question strings and stores the results for each question in a
+     * Map of answer strings and the corresponding number of responses for that possible answer.
+     * calls generateCharts to display the results
+     */
     private void getResults() {
         ResponseDatabaseHelper helper = new ResponseDatabaseHelper(title);
         SurveyDatabaseHelper surveyHelper = new SurveyDatabaseHelper(title);
@@ -51,6 +75,12 @@ public class SurveyResultController {
         addCharts(resultsList, questionList);
     }
 
+    /**
+     * Generates pie charts for each question
+     * @param questionResponses a list of maps where each element represents a question and the map
+     *                          is the map of the recorded responses
+     * @param questions a list of questions in the survey
+     */
     private void addCharts(List<Map<String, Integer>> questionResponses, List<Question> questions) {
         System.out.println(questionResponses);
 
