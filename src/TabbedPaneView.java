@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class TabbedPaneView extends JFrame {
-    JTabbedPane tabbedPane;
+    private JTabbedPane tabbedPane;
     JButton createSurveyButton;
     JButton deleteSurveyButton;
     JButton takeSurveyButton;

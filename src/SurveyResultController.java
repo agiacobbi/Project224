@@ -11,9 +11,8 @@ import java.util.Map;
 
 
 public class SurveyResultController {
-    ResultSet surveyResults;
-    String title;
-    SurveyResultView view;
+    private String title;
+    private SurveyResultView view;
 
     public SurveyResultController(String title) {
         this.title = title;
