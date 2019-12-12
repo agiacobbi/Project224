@@ -1,5 +1,7 @@
 /**
- * DESCRIPTION
+ * This class handles the events being fired on the BuildSurveyView window that appears when the user creates a new
+ * survey. The design pattern utilizes MVC architecture to separate firing and handling events into different classes.
+ *
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -12,14 +14,34 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Controller class that connects the app to an instance of BuildSurveyView when user prompts for a new Survey object to
+ * be created. BuildSurveyController handles the events that are fired on the BuildSurveyView GUI.
+ *
+ * @see BuildSurveyView
+ */
 public class BuildSurveyController {
     private BuildSurveyView view;
 
+    /**
+     * Constructor for BuildSurveyController. A new instance of BuildSurveyController is called with a reference to
+     * a Survey object.
+     *
+     * @param model model is a Survey object that is created from responses from events fired by BuildSurveyView
+     *              and handled by BuildSurveyController
+     */
     public BuildSurveyController(Survey model) {
         this.view = new BuildSurveyView(this);
 
 
         view.addQuestionButton.addActionListener(new ActionListener() {
+            /**
+             * Handles the events fired by user on the GUI, specifically attached to the addQuestionButton on the
+             * BuildSurveyView window that appears when the user is creating a survey
+             *
+             * @param actionEvent actionEvent is an ActionEvent object that the user creates when they press the button
+             *                    on the GUI
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 if(!view.writeQuestion.getText().isEmpty()) {
@@ -80,6 +102,13 @@ public class BuildSurveyController {
         });
 
         view.twoAnswerButton.addActionListener(new ActionListener() {
+            /**
+             * Handles the event fired by the user on the GUI, specifically when the user selects the radio button
+             * for 2 answers to be available for the question being added
+             *
+             * @param actionEvent actionEvent is an ActionEvent object that the user creates when they press the button
+             *                   on the GUI
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 view.option1.setEnabled(true);
@@ -90,6 +119,13 @@ public class BuildSurveyController {
         });
 
         view.threeAnswerButton.addActionListener(new ActionListener() {
+            /**
+             * Handles the event fired by the user on the GUI, specifically when the user selects the radio button
+             * for 3 answers to be available for the question being added
+             *
+             * @param actionEvent actionEvent is an ActionEvent object that the user creates when they press the button
+             *                    on the GUI
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 view.option1.setEnabled(true);
@@ -100,6 +136,13 @@ public class BuildSurveyController {
         });
 
         view.fourAnswerButton.addActionListener(new ActionListener() {
+            /**
+             * Handles the event fired by the user on the GUI, specifically when the user selects the radio button
+             * for 4 answers to be available for the question being added
+             *
+             * @param actionEvent actionEvent is an ActionEvent object that the user creates when they press the button
+             *                    on the GUI
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 view.option1.setEnabled(true);
@@ -110,6 +153,13 @@ public class BuildSurveyController {
         });
 
         view.buildButton.addActionListener(new ActionListener() {
+            /**
+             * Handles the event fired by the user on the GUI, when the Build Survey button is pressed, a new Survey
+             * object will be instantiated and sent to database
+             *
+             * @param actionEvent actionEvent is an ActionEvent object that the user creates when they press the button
+             *                    on the GUI
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 SurveyDatabaseHelper helper = new SurveyDatabaseHelper(model.getTitle());
@@ -122,13 +172,17 @@ public class BuildSurveyController {
         });
     }
 
-    public static void main(String[] args) {
-        Survey model = new Survey("Survey");
-        BuildSurveyController controller = new BuildSurveyController(model);
-
-    }
-
+    /**
+     * Class that adds Item listener to the radio button groups on GUI
+     */
     class MyRadioButtonItemListener implements ItemListener {
+        /**
+         * Checks when there is a state change for the radio buttons on the GUI,
+         * switches state between SELECTED and DESELECTED when a radio button is pressed
+         *
+         * @param e e is an ItemEvent object that gets its source when a radio button is selected from the radio
+         *          button group on our GUI
+         */
         @Override
         public void itemStateChanged(ItemEvent e) {
             // https://docs.oracle.com/javase/7/docs/api/java/awt/event/ItemEvent.html
