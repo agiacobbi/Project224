@@ -69,7 +69,7 @@ public class TabbedPaneController {
                         JOptionPane.INFORMATION_MESSAGE
                         );
 
-                if (surveyTitle.length() == 0) {
+                if (surveyTitle == null) {
                     return;
                 }
 

@@ -1,5 +1,7 @@
 /**
- * DESCRIPTION
+ * This class creates the GUI for when the user prompts for a new survey to be created. The design pattern utilizes
+ * MVC architecture to separate firing and handling events into different classes.
+ *
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -11,6 +13,13 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * View class that creates the GUI of the window that appears when a user chooses to make a new survey.
+ * BuildSurveyView extends JFrame, and uses a combination of layouts including BorderLayout and GridLayout,
+ * as well as several buttons, text fields, and other GUI components that the Java Swing Framework provides.
+ *
+ * @see BuildSurveyController
+ */
 public class BuildSurveyView extends JFrame {
     private BuildSurveyController controller;
     protected JLabel numberedQuestion;
@@ -29,6 +38,12 @@ public class BuildSurveyView extends JFrame {
     protected JPanel newQuestionPanel;
     protected int i;
 
+    /**
+     * Constructor for BuildSurveyView. New JFrame is created with reference to BuildSurveyController object.
+     *
+     * @param controller controller is BuildSurveyController object that contains a reference to the class that handles
+     *                   the events that are fired when BuildSurveyView GUI components get interacted with
+     */
     public BuildSurveyView(BuildSurveyController controller) {
         super("Build Survey");
         this.controller = controller;
@@ -40,6 +55,9 @@ public class BuildSurveyView extends JFrame {
         pack();
     }
 
+    /**
+     * The JFrame's components are created and set in place on the GUI for user interaction
+     */
     private void setupUI() {
 
         JPanel mainPanel = (JPanel) getContentPane();
@@ -76,7 +94,6 @@ public class BuildSurveyView extends JFrame {
         addQuestionPanel.setBackground(Color.CYAN);
 
         newQuestionPanel.add(addQuestionPanel);
-
 
 
         /*
@@ -143,8 +160,6 @@ public class BuildSurveyView extends JFrame {
        mainPanel.add(newQuestionPanel, BorderLayout.NORTH);
 
 
-
-
         /*
         ~~~~~~~~~~~~~~~~~~~~~~~~~
         mainPanel's CENTER
@@ -168,10 +183,20 @@ public class BuildSurveyView extends JFrame {
         mainPanel.add(buildButton, BorderLayout.SOUTH);
     }
 
+    /**
+     * Getter method for retrieving I value, which is counter for number of questions on survey
+     *
+     * @return the chronological number of the question that is being added to the survey
+     */
     public int getI() {
         return i;
     }
 
+    /**
+     * Setter method for setting the I value of the number for question on survey
+     *
+     * @param i the number that is assigned chronologically to the question on the survey
+     */
     public void setI(int i) {
         this.i = i;
     }
