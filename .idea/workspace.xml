@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xchart_3_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/xchart_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PollABear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PollABear.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SurveyResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SurveyResultView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabbedPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabbedPaneView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneView.java" afterDir="false" />
-    </list>
+    <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
