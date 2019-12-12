@@ -16,7 +16,6 @@ import org.knowm.xchart.XChartPanel;
 import org.knowm.xchart.style.Styler;
 
 import javax.swing.*;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

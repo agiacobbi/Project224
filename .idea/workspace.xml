@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/databases/databaseQuestions.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/databaseResponses.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databaseResponses.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$MyRadioButtonItemListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$MyRadioButtonItemListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildSurveyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabbedPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
-    </list>
+    <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
