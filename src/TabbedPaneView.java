@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 public class TabbedPaneView extends JFrame {
     JTabbedPane tabbedPane;
     JButton createSurveyButton;
-    JButton editSurveyButton;
+    JButton deleteSurveyButton;
     JButton takeSurveyButton;
     JButton viewResultsButton;
     JList<String> surveysList;
@@ -141,8 +141,8 @@ public class TabbedPaneView extends JFrame {
         buttonPanel.setBackground(Color.CYAN);
         createSurveyButton = new JButton("New Survey");
         buttonPanel.add(createSurveyButton);
-        editSurveyButton = new JButton("Edit Survey");
-        buttonPanel.add(editSurveyButton);
+        deleteSurveyButton = new JButton("Delete Survey");
+        buttonPanel.add(deleteSurveyButton);
 
         panel.add(buttonPanel, BorderLayout.SOUTH);
 

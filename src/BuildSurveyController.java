@@ -19,15 +19,26 @@ public class BuildSurveyController {
                             (view.option2.isEnabled() && view.option2.getText().isEmpty()) ||
                             (view.option3.isEnabled() && view.option3.getText().isEmpty()) ||
                             (view.option4.isEnabled() && view.option4.getText().isEmpty())) {
-                        JOptionPane.showMessageDialog(null, "Must Fill out All Responses");
+                        JOptionPane.showMessageDialog(null, "Must Fill Out Chosen Responses");
                     }
                     else {
                         JPanel panel = new JPanel();
                         panel.setBackground(Color.CYAN);
                         panel.setLayout(new GridLayout(2, 1));
 
+//                        JLabel textLabel = new JLabel();
+//                        Question question = new Question(view.writeQuestion.getText(), "True", "False", "TF");
+//                        model.addQuestion(question);
+//                        textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
+
                         JLabel textLabel = new JLabel();
-                        Question question = new Question(view.writeQuestion.getText(), "True", "False", "TF");
+                        String questionStr = view.writeQuestion.getText();
+                        String aResp = view.option1.getText();
+                        String bResp = view.option2.getText();
+                        String cResp = view.option3.getText().length() > 0 ? view.option3.getText() : null;
+                        String dResp = view.option4.getText().length() > 0 ? view.option4.getText() : null;
+
+                        Question question = new Question(questionStr, aResp, bResp, cResp, dResp);
                         model.addQuestion(question);
                         textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
 
@@ -62,33 +73,6 @@ public class BuildSurveyController {
                 else {
                     JOptionPane.showMessageDialog(null, "No Question Given");
                 }
-//                JPanel panel = new JPanel();
-//                panel.setBackground(Color.CYAN);
-//                panel.setLayout(new GridLayout(2,1));
-
-                JLabel textLabel = new JLabel();
-                String questionStr = view.writeQuestion.getText();
-                String aResp = view.option1.getText();
-                String bResp = view.option2.getText();
-                String cResp = view.option3.getText().length() > 0 ? view.option3.getText() : null;
-                String dResp = view.option4.getText().length() > 0 ? view.option4.getText() : null;
-
-                Question question = new Question(questionStr, aResp, bResp, cResp, dResp);
-                model.addQuestion(question);
-                textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
-
-//                JLabel typeLabel = new JLabel();
-//                typeLabel.setFont(new Font("Arial", Font.ITALIC, 12));
-//                typeLabel.setText(view.threeAnswerButton.getText());
-//
-//                panel.add(textLabel);
-//                panel.add(typeLabel);
-//                view.addedQuestionsPanel.add(panel);
-//                view.setI(view.i + 1);
-//                view.numberedQuestion.setText(view.getI() + ".");
-
-
-                view.addedQuestionsPanel.validate();
             }
         });
 

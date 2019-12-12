@@ -27,6 +27,13 @@ public class SurveyDatabaseHelper {
         createSurveyTable();
     }
 
+    public SurveyDatabaseHelper(String surveyTitle, boolean deleteSurveyVal) {
+        if (deleteSurveyVal) {
+            this.surveyTitle = surveyTitle;
+            getConnection();
+        }
+    }
+
     private void createSurveyTable() {
         String sqlCreate = "CREATE TABLE " + TABLE_NAME + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +

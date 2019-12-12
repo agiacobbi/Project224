@@ -58,12 +58,16 @@ public class TabbedPaneController {
             }
         });
 
-        view.editSurveyButton.addActionListener(new ActionListener() {
+        view.deleteSurveyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                System.out.println("delete button clicked");
                 // TODO maybe implement edit survey functionality
-
+                String selectedSurvey = view.surveysList.getSelectedValue();
+                SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper(selectedSurvey, true);
+                getHelper.deleteSurvey();
+                getHelper.closeConnection();
             }
         });
 

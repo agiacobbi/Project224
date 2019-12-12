@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="583d03c5-7fd5-4460-9bb6-7130678e8559" name="Default Changelist" comment="">
+    <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databases/databaseQuestions.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databaseQuestions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/databaseResponses.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databaseResponses.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView$QuestionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView$QuestionPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyScreenView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$MyRadioButtonItemListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController$MyRadioButtonItemListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/BuildSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/META-INF/PollABear.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/META-INF/PollABear.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabbedPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabbedPaneView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +51,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.27.2.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
@@ -125,22 +140,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1575771890605">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1576122012965">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1575771890605" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1575771890604">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576122012965" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1576122012965">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1575771890604">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576122012965" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1576122012964">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1575771890604">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576122012964" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1576122012965">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1575771890604" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576122012965" />
+    <state x="165" y="10" key="SettingsEditor" timestamp="1576122466223">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1576122466223" />
     <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1574980404544">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
