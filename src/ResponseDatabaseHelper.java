@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.Map;
 
 public class ResponseDatabaseHelper {
-    static final String DATABASE_NAME = "databaseResponses.db";
-    static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
-    static final String TABLE_NAME = "Response";
-    static final String ID = "id";
-    static final String SURVEY_NAME = "name";
-    static final String QUESTION = "question";
-    static final String RESPONSE = "response";
+    private static final String DATABASE_NAME = "databaseResponses.db";
+    private static final String CONNECTION_URL = "jdbc:sqlite:databases/" + DATABASE_NAME;
+    private static final String TABLE_NAME = "Response";
+    private static final String ID = "id";
+    private static final String SURVEY_NAME = "name";
+    private static final String QUESTION = "question";
+    private static final String RESPONSE = "response";
 
-    Connection connection;
-    String title;
+    private Connection connection;
+    private String title;
 
     public ResponseDatabaseHelper(String title) {
         this.title = title;

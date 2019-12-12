@@ -4,12 +4,10 @@ import java.awt.event.*;
 
 public class BuildSurveyController {
     private BuildSurveyScreenView view;
-    private Survey model;
     private ResponseDatabaseHelper database;
 
     public BuildSurveyController(Survey model) {
         this.view = new BuildSurveyScreenView(this);
-        this.model = model;
 
         view.addQuestionButton.addActionListener(new ActionListener() {
             @Override
@@ -25,11 +23,6 @@ public class BuildSurveyController {
                         JPanel panel = new JPanel();
                         panel.setBackground(Color.CYAN);
                         panel.setLayout(new GridLayout(2, 1));
-
-//                        JLabel textLabel = new JLabel();
-//                        Question question = new Question(view.writeQuestion.getText(), "True", "False", "TF");
-//                        model.addQuestion(question);
-//                        textLabel.setText(view.getI() + ". " + view.writeQuestion.getText());
 
                         JLabel textLabel = new JLabel();
                         String questionStr = view.writeQuestion.getText();

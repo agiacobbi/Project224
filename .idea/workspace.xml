@@ -2,31 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xchart_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PollABear/ResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/xchart_3_6_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PollABear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PollABear.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/databaseQuestions.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/databaseResponses.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/ResponseDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/ResponseDatabaseHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BooleanQuestion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ResponseDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResponseDatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyDatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SurveyResultView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabbedPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabbedPaneView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyScreenView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TitleScreenView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
