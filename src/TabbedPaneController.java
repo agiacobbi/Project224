@@ -1,5 +1,5 @@
 /**
- * DESCRIPTION
+ * Handles all the action events and the logic for the tabbed pane GUI
  * CPSC 224-01, Fall 2019
  * Final Project -- Poll-A-Bear
  * CITATIONS
@@ -16,9 +16,16 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.util.List;
 
+/**
+ * handles all actions involved with the tabbed panes
+ * @see TakeSurveyView
+ */
 public class TabbedPaneController {
     private TabbedPaneView view;
 
+    /**
+     *Constructor for TabbedPaneController and handles all actions performed regarding the tabbed panes
+     */
     public TabbedPaneController() {
         view = new TabbedPaneView();
 
@@ -28,6 +35,9 @@ public class TabbedPaneController {
 
     }
 
+    /**
+     * handles all actionListeners involved with switching tabs
+     */
     private void addWindowAdapter() {
         view.addWindowFocusListener(new WindowFocusListener() {
             @Override
@@ -42,8 +52,15 @@ public class TabbedPaneController {
         });
     }
 
+    /**
+     * handles actions from JButtons
+     */
     private void addListeners() {
         view.createSurveyButton.addActionListener(new ActionListener() {
+            /**
+             * creates prompt for new survey title and creates new survey
+             * @param actionEvent new JOptionPane to name new survey
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String surveyTitle = JOptionPane.showInputDialog(view,
@@ -72,6 +89,10 @@ public class TabbedPaneController {
         });
 
         view.deleteSurveyButton.addActionListener(new ActionListener() {
+            /**
+             * deletes survey
+             * @param actionEvent
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String selectedSurvey = view.createSurveyList.getSelectedValue();
@@ -91,6 +112,10 @@ public class TabbedPaneController {
 
 
         view.takeSurveyButton.addActionListener(new ActionListener() {
+            /**
+             * calls for selected survey to be constructed on take survey screen
+             * @param actionEvent
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String selectedSurvey = view.surveysList.getSelectedValue();
@@ -104,6 +129,10 @@ public class TabbedPaneController {
 
 
         view.viewResultsButton.addActionListener(new ActionListener() {
+            /**
+             * opens new JFrame that shows survey responses
+             * @param actionEvent
+             */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String selectedSurvey = view.availableResultsList.getSelectedValue();
@@ -112,6 +141,9 @@ public class TabbedPaneController {
         });
     }
 
+    /**
+     * updates survey lists with correct information
+     */
     private void updateLists() {
         SurveyDatabaseHelper surveyHelper = new SurveyDatabaseHelper(null);
         ResponseDatabaseHelper responseHelper = new ResponseDatabaseHelper();
@@ -139,6 +171,10 @@ public class TabbedPaneController {
     }
 
 
+    /**
+     * Runs the program
+     * @param args
+     */
     public static void main(String[] args) {
         new TabbedPaneController();
     }
