@@ -44,6 +44,7 @@ public class SurveyResultView extends JFrame {
     private void setupUI() {
         JPanel mainPanel = (JPanel) getContentPane();
         JLabel titleLabel = new JLabel("Results for " + surveyTitle);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 28));
         mainPanel.add(titleLabel, BorderLayout.NORTH);
 
         graphScroll = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
