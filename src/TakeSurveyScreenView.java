@@ -1,107 +1,98 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TakeSurveyScreenView extends JFrame{
     //private Controller controller;
     JPanel frame;
-    private JPanel questionBank;
-    private Survey survey;
-    private int size;
-    public JRadioButton trueButton;
-    public JRadioButton falseButton;
-    public JButton submitResponses;
-    private DatabaseHelper helper;
+    JPanel questionBank;
+    JButton submitResponses;
+    List<QuestionPanel> questions;
+    Survey survey;
 
-
-    /*public TakeSurveyScreenView(Controller controller, Survey survey) {
-        super("Take Survey");
-        this.controller = controller;
-        this.survey = survey;
-
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(700, 850));
-        setupUI();
-        pack();
-    }*/
 
     public TakeSurveyScreenView(Survey survey) {
         super("Take Survey");
         this.survey = survey;
+        questions = new ArrayList<>();
 
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(700, 850));
+        setPreferredSize(new Dimension(700, 550));
+
         setupUI();
         pack();
     }
 
     private void setupUI() {
         frame = (JPanel) getContentPane();
-        //frame.setLayout();
         questionBank = new JPanel();
-        questionBank.setLayout(new GridLayout(0, 1));
+        questionBank.setLayout(new BoxLayout(questionBank, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(questionBank);
         questionBank.setBackground(Color.CYAN);
 
         int i = 1;
         for (Question q : survey.getQuestions()) {
-            JPanel questionPanel = new JPanel();
-            questionPanel.setBackground(Color.CYAN);
-            questionPanel.setLayout(new BoxLayout(questionPanel, BoxLayout.Y_AXIS));
-            questionPanel.setBorder(BorderFactory.createTitledBorder("Question" + i));
-            JLabel questionLabel = new JLabel(q.getText());
-
-            trueButton = new JRadioButton(q.getTrueResponse());
-            falseButton = new JRadioButton(q.getFalseResponse());
-
-            ButtonGroup buttonGroup = new ButtonGroup();
-            buttonGroup.add(trueButton);
-            buttonGroup.add(falseButton);
-
-            trueButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent actionEvent) {
-                    System.out.println("true");
-
-                    int i = 0;
-                    for(int j = 0; j < survey.questions.size(); j++) {
-                        if(survey.questions.get(j).getText() == questionLabel.getText()) {
-                            i = j;
-                        }
-                    }
-                    survey.questions.get(i).setUserResponse("true");
-                }
-            });
-
-            falseButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent actionEvent) {
-                    System.out.println("false");
-
-                    int i = 0;
-                    for(int j = 0; j < survey.questions.size(); j++) {
-                        if(survey.questions.get(j).getText() == questionLabel.getText()) {
-                            i = j;
-                        }
-                    }
-                    survey.questions.get(i).setUserResponse("false");
-
-                }
-            });
-
-            questionPanel.add(questionLabel);
-            questionPanel.add(trueButton);
-            questionPanel.add(falseButton);
+            QuestionPanel questionPanel = new QuestionPanel(q, i);
             questionBank.add(questionPanel);
-
+            questions.add(questionPanel);
             i++;
         }
+
         submitResponses = new JButton("Submit Responses");
         frame.add(submitResponses, BorderLayout.SOUTH);
         frame.add(scrollPane, BorderLayout.CENTER);
+    }
+
+    class QuestionPanel extends JPanel {
+        Question question;
+        int questionIndex;
+        JRadioButton aButton;
+        JRadioButton bButton;
+        JRadioButton cButton;
+        JRadioButton dButton;
+
+        public QuestionPanel(Question question, int i) {
+            this.question = question;
+            questionIndex = i - 1;
+
+            setLayout(new GridLayout(0,1));
+            setBackground(Color.CYAN);
+            setBorder(BorderFactory.createTitledBorder("Question" + i));
+
+            addComponents();
+        }
+
+        private void addComponents() {
+            JLabel questionLabel = new JLabel(question.getText());
+            add(questionLabel);
+
+            ButtonGroup buttonGroup = new ButtonGroup();
+            if (question.getaResponse() != null) {
+                aButton = new JRadioButton(question.getaResponse());
+                add(aButton);
+                buttonGroup.add(aButton);
+            }
+            if (question.getbResponse() != null) {
+                bButton = new JRadioButton(question.getbResponse());
+                add(bButton);
+                buttonGroup.add(bButton);
+            }
+            if (question.getcResponse() != null) {
+                cButton = new JRadioButton(question.getcResponse());
+                add(cButton);
+                buttonGroup.add(cButton);
+            }
+            if (question.getdResponse() != null) {
+                dButton = new JRadioButton(question.getdResponse());
+                add(dButton);
+                buttonGroup.add(dButton);
+            }
+        }
+
+
     }
 
     public static void main(String[] args) {
