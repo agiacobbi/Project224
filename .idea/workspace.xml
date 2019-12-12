@@ -3,7 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="4c4d8cee-cdeb-4249-8274-690ff8a49a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TakeSurveyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeSurveyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/META-INF/PollABear.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/ResponseDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/ResponseDatabaseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/Survey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/Survey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyDatabaseHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/SurveyResultView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TabbedPaneView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyView$QuestionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyView$QuestionPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PollABear/TakeSurveyView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SurveyResultView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurveyResultView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabbedPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabbedPaneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +52,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries/xchart-3.6.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.TabbedPaneController">
     <configuration name="BuildSurveyController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -81,18 +115,6 @@
         <item itemvalue="Application.BuildSurveyController" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

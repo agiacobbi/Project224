@@ -118,6 +118,10 @@ public class TabbedPaneController {
              */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                if (view.surveysList.isSelectionEmpty()) {
+                    return;
+                }
+
                 String selectedSurvey = view.surveysList.getSelectedValue();
                 SurveyDatabaseHelper getHelper = new SurveyDatabaseHelper(selectedSurvey);
                 Survey s = getHelper.getSurvey();
@@ -135,6 +139,10 @@ public class TabbedPaneController {
              */
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                if (view.availableResultsList.isSelectionEmpty()) {
+                    return;
+                }
+
                 String selectedSurvey = view.availableResultsList.getSelectedValue();
                 new SurveyResultController(selectedSurvey);
             }
